@@ -1,0 +1,12 @@
+{
+  "tpl": {
+    "webpack-babel-react": {
+      "url": "https://github.com/Gozeon/webpack-react-babel.git",
+      "branch": "master"
+    },
+    "webpack-babel-react-v1": {
+      "url": "https://github.com/Gozeon/webpack-babel-react-v1.git",
+      "branch": "master"
+    }
+  }
+}
