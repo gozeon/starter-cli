@@ -31,7 +31,7 @@ program
   .description('Generate a new project')
   .alias('i')
   .action(() => {
-    require('../command/list')()
+    require('../command/init')()
   })
 
 program
