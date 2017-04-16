@@ -1,13 +1,10 @@
 {
   "name": "goze-cli",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "bin": {
-    "goze": "bin/goze"
+    "goze": "./bin/goze.js"
   },
   "keywords": [],
   "author": "goze",
