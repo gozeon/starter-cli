@@ -1,10 +1,14 @@
 {
   "name": "goze-cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
   "bin": {
     "goze": "./bin/goze.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gozeon/GOZE-CLI.git"
   },
   "keywords": [],
   "author": "goze",
