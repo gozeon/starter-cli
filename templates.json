@@ -16,6 +16,10 @@
       "url": "https://github.com/davezuko/react-redux-starter-kit.git",
       "branch": "master"
     },
+    "react-native-starter-app": {
+      "url": "https://github.com/mcnamee/react-native-starter-app.git",
+      "branch": "master"
+    },
     "angular-starter": {
       "url": "https://github.com/AngularClass/angular-starter.git",
       "branch": "master"
