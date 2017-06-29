@@ -1,12 +1,32 @@
 {
   "tpl": {
-    "webpack-babel-react": {
-      "url": "https://github.com/Gozeon/webpack-react-babel.git",
+    "create-react-app-eslint": {
+      "url": "https://github.com/Gozeon/create-react-app-eslint.git",
       "branch": "master"
     },
-    "webpack-babel-react-v1": {
-      "url": "https://github.com/Gozeon/webpack-babel-react-v1.git",
+    "create-react-app-redux": {
+      "url": "https://github.com/notrab/create-react-app-redux.git",
       "branch": "master"
+    },
+    "react-starter-kit": {
+      "url": "https://github.com/kriasoft/react-starter-kit.git",
+      "branch": "master"
+    },
+    "react-redux-starter-kit": {
+      "url": "https://github.com/davezuko/react-redux-starter-kit.git",
+      "branch": "master"
+    },
+    "angular-class-angular-starter": {
+      "url": "https://github.com/AngularClass/angular-starter.git",
+      "branch": "master"
+    },
+    "google-web-starter-kit": {
+      "url": "https://github.com/google/web-starter-kit.git",
+      "branch": "master"
+    },
+    "typeScript-react-starter": {
+      "url": "https://github.com/Microsoft/TypeScript-React-Starter.git",
+      "branch":"master"
     }
   }
 }
