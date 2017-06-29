@@ -28,6 +28,10 @@
       "url": "https://github.com/google/web-starter-kit.git",
       "branch": "master"
     },
+    "es6-webpack2-starter": {
+      "url": "https://github.com/micooz/es6-webpack2-starter.git",
+      "branch": "master"
+    },
     "typeScript-react-starter": {
       "url": "https://github.com/Microsoft/TypeScript-React-Starter.git",
       "branch": "master"
