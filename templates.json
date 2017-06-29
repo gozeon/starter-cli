@@ -26,7 +26,11 @@
     },
     "typeScript-react-starter": {
       "url": "https://github.com/Microsoft/TypeScript-React-Starter.git",
-      "branch":"master"
+      "branch": "master"
+    },
+    "angular2-react": {
+      "url": "https://github.com/jesion/angular2-react.git",
+      "branch": "master"
     }
   }
 }
