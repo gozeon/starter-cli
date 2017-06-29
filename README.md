@@ -27,3 +27,4 @@ goze
 ## Others
 
 - [google/web-starter-kit](https://github.com/google/web-starter-kit.git)
+- [jesion/angular2-react](https://github.com/jesion/angular2-react.git)
