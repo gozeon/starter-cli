@@ -2,7 +2,9 @@
 'use strict'
 process.env.NODE_PATH = __dirname + '/../node_modules/'
 
-const program = require('commander');
+const program = require('commander')
+const findConfig = require('find-config')
+const pkg = findConfig('package.json');
 
 program
   .version(require('../package').version)
@@ -45,5 +47,6 @@ program
 program.parse(process.argv)
 
 if (!program.args.length) {
+  console.log(pkg.name);
   program.help()
 }
