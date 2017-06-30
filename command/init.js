@@ -33,33 +33,34 @@ module.exports = () => {
         process.exit()
       }
 
-      utils.gitInit(projectName, function (error) {
-        if (error) {
-          console.log(error)
-          process.exit()
-        }
-        const projectPath = path.resolve(process.cwd(), `${projectName}/`);
+      const projectPath = path.resolve(process.cwd(), `${projectName}/`);
 
-        fs.readJson(path.resolve(projectPath, 'package.json'))
-          .then(packageObj => {
-            fs.writeJson(path.resolve(projectPath, 'package.json'),
-              utils.rewritePkg(projectName, packageObj), err => {
-                if (err) {
-                  console.log(err)
+      fs.readJson(path.resolve(projectPath, 'package.json'))
+        .then(packageObj => {
+          fs.writeJson(path.resolve(projectPath, 'package.json'),
+            utils.rewritePkg(projectName, packageObj), err => {
+              if (err) {
+                console.log(err)
+                process.exit()
+              }
+
+              utils.gitInit(projectName, function (error) {
+                if (error) {
+                  console.log(error)
                   process.exit()
                 }
-
+                
                 console.log(`${chalk.green('√ Generation completed!')}`)
                 console.log(`\n cd ${projectName} && npm install \n`)
                 process.exit()
               })
+            })
 
-          })
-          .catch(err => {
-            console.log(err)
-            process.exit()
-          })
-      })
+        })
+        .catch(err => {
+          console.log(err)
+          process.exit()
+        })
     })
   })
 }
