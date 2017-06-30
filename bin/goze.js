@@ -4,6 +4,7 @@ process.env.NODE_PATH = __dirname + '/../node_modules/'
 
 const program = require('commander')
 const chalk = require('chalk')
+const emoji = require('node-emoji')
 
 program
   .version(require('../package').version)
@@ -13,15 +14,15 @@ program
 
 program
   .command('add')
-  .description('Add a new template')
-  .alias(chalk.gray('a'))
+  .description(`${emoji.random()} Add a new template`)
+  .alias('a')
   .action(() => {
     require('../command/add')()
   })
 
 program
   .command('list')
-  .description('List all the templates')
+  .description(`${emoji.random()} List all the templates`)
   .alias('l')
   .action(() => {
     require('../command/list')()
@@ -29,7 +30,7 @@ program
 
 program
   .command('init')
-  .description('Generate a new project')
+  .description(`${emoji.random()} Generate a new project`)
   .alias('i')
   .action(() => {
     require('../command/init')()
@@ -37,8 +38,8 @@ program
 
 program
   .command('delete')
-  .description('😀 Delete a template')
-  .alias('d')
+  .description(`${emoji.random()} Delete a template`)
+  .alias('i')
   .action(() => {
     require('../command/delete')()
   })

@@ -4,6 +4,7 @@ const co = require('co')
 const prompt = require('co-prompt')
 const config = require('../templates')
 const chalk = require('chalk')
+const emoji = require('node-emoji')
 
 module.exports = () => {
   co(function* () {
@@ -13,7 +14,7 @@ module.exports = () => {
     let branch
 
     if (!config.tpl[tplName]) {
-      console.log(chalk.red('\n × Template does not exit!'))
+      console.log(`${emoji.get(':exclamation:')} chalk.red('\n × Template does not exit!')`)
       process.exit()
     }
     gitUrl = config.tpl[tplName].url
@@ -28,7 +29,7 @@ module.exports = () => {
         console.log(error)
         process.exit()
       }
-      console.log(chalk.green('\n √ Generation completed!'))
+      console.log(`${emoji.get(':heavy_check_mark:')} ${chalk.green('\n √ Generation completed!')}`)
       console.log(`\n cd ${projectName} && npm install \n`)
       process.exit()
     })
