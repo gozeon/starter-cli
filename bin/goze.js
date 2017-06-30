@@ -47,6 +47,6 @@ program
 program.parse(process.argv)
 
 if (!program.args.length) {
-  console.log(pkg.name);
+  console.log(pkg['name']);
   program.help()
 }
