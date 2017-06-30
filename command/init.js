@@ -14,7 +14,7 @@ module.exports = () => {
     let branch
 
     if (!config.tpl[tplName]) {
-      console.log(`${emoji.get(':warning:')}' chalk.red('\n × Template does not exit!')`)
+      console.log(`${emoji.get(':warning:')}' ${chalk.red('Template does not exit!')}`)
       process.exit()
     }
     gitUrl = config.tpl[tplName].url
@@ -22,14 +22,14 @@ module.exports = () => {
 
     let cmdStr = `git clone -b ${branch} ${gitUrl} ${projectName}`
 
-    console.log(chalk.white('\n Start generating...'))
+    console.log(chalk.white('\n Start generating... \n'))
 
     exec(cmdStr, (error, stdout, stderr) => {
       if (error) {
         console.log(error)
         process.exit()
       }
-      console.log(`${emoji.get(':sparkles:')}' ${chalk.green('\n √ Generation completed!')}`)
+      console.log(`${emoji.get(':sparkles:')}' ${chalk.green('√ Generation completed!')}`)
       console.log(`\n cd ${projectName} && npm install \n`)
       process.exit()
     })
