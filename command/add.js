@@ -18,13 +18,13 @@ module.exports = () => {
       config.tpl[tplName]['url'] = gitUrl.replace(/[\u0000-\u0019]/g, '')
       config.tpl[tplName]['branch'] = branch
     } else {
-      console.log(`${emoji.get(':warning:')} ${chalk.red('Template has already existed!')}`)
+      console.log(`${emoji.get(':warning:')}' '${chalk.red('Template has already existed!')}`)
       process.exit()
     }
 
     fs.writeFile(__dirname + '/../templates.json', JSON.stringify(config), 'utf-8', (err) => {
       if (err) console.log(err)
-      console.log(`${emoji.get(':sparkles:')} ${chalk.green('New template added!\n')}`)
+      console.log(`${emoji.get(':sparkles:')}' '${chalk.green('New template added!\n')}`)
       console.log(chalk.grey('The last template list is: \n'))
       utils.consoleTemplate();
       console.log('\n')

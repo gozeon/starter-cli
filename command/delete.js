@@ -14,13 +14,13 @@ module.exports = () => {
     if (config.tpl[tplName]) {
       config.tpl[tplName] = undefined
     } else {
-      console.log(`${emoji.get(':warning:')} ${chalk.red('Template does not exist!')}`)
+      console.log(`${emoji.get(':warning:')}' '${chalk.red('Template does not exist!')}`)
       process.exit()
     }
 
     fs.writeFile(__dirname + '/../templates.json', JSON.stringify(config), 'utf-8', (err) => {
       if (err) console.log(err)
-      console.log(`${emoji.get(':sparkles:')} ${chalk.green('\n √ Template deleted!')}`)
+      console.log(`${emoji.get(':sparkles:')}' '${chalk.green('Template deleted!')}`)
       console.log(chalk.grey('The last template list is: \n'))
       utils.consoleTemplate();
       console.log('\n')
