@@ -19,6 +19,7 @@
     "co-prompt": "^1.0.0",
     "commander": "^2.9.0",
     "find-config": "^1.0.0",
+    "fs-extra": "^3.0.1",
     "node-emoji": "^1.5.1"
   }
 }
