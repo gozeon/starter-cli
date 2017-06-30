@@ -29,8 +29,8 @@ module.exports = () => {
         console.log(error)
         process.exit()
       }
-
-      exec(`cd ${projectName} && rm -rf .git && git init`, (error, stdout, stderr) => {
+      let initGitStr = `rm -rf ./${projectName}/.git/ && git init && git add . && git commit -m "chore(*): init project by goze-cli"`
+      exec(initGitStr, (error, stdout, stderr) => {
         if (error) {
           console.log(error)
           process.exit()
