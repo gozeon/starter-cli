@@ -1,11 +1,10 @@
 const templates = require('../templates')
-
-function consoleTemplate() {
-  Object.getOwnPropertyNames(templates.tpl).forEach((key, idx, array) => {
-    console.log(`${chalk.grey(idx)}:  ${chalk.green(key)}`)
-  });
-}
+const chalk = require('chalk')
 
 module.exports = {
-  consoleTemplate
+  consoleTemplate: function () {
+    Object.getOwnPropertyNames(templates.tpl).forEach((key, idx, array) => {
+      console.log(`${chalk.grey(idx)}:  ${chalk.green(key)}`)
+    })
+  }
 }
