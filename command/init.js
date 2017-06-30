@@ -14,7 +14,7 @@ module.exports = () => {
     let branch
 
     if (!config.tpl[tplName]) {
-      console.log(`${emoji.get(':warning:')}' 'chalk.red('\n × Template does not exit!')`)
+      console.log(`${emoji.get(':warning:')}' chalk.red('\n × Template does not exit!')`)
       process.exit()
     }
     gitUrl = config.tpl[tplName].url
@@ -29,7 +29,7 @@ module.exports = () => {
         console.log(error)
         process.exit()
       }
-      console.log(`${emoji.get(':sparkles:')}' '${chalk.green('\n √ Generation completed!')}`)
+      console.log(`${emoji.get(':sparkles:')}' ${chalk.green('\n √ Generation completed!')}`)
       console.log(`\n cd ${projectName} && npm install \n`)
       process.exit()
     })
