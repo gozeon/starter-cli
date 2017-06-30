@@ -12,7 +12,7 @@ module.exports = {
     let initGitStr = `cd ${projectName}/ &&` +
       ` rm -rf .git/ && ` +
       `git init && git add . && ` +
-      `git commit -m "chore(*): init project by goze-cli" && cd ..`
+      `git commit -m "chore(*): init project by starter-cli" && cd ..`
     exec(initGitStr, (error, stdout, stderr) => {
       if (error) {
         callback(error)
