@@ -5,7 +5,7 @@ const chalk = require('chalk')
 module.exports = () => {
   templates.tpl;
   Object.getOwnPropertyNames(templates.tpl).forEach((key, idx, array) => {
-    console.log(`${chalk.grey(index)}:  ${chalk.green(key)}`)
+    console.log(`${chalk.grey(idx)}:  ${chalk.green(key)}`)
   });
   process.exit()
 }
