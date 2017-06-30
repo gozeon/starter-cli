@@ -36,7 +36,7 @@ program
 
 program
   .command('delete')
-  .description('Delete a template')
+  .description(':x: Delete a template')
   .alias('d')
   .action(() => {
     require('../command/delete')()
