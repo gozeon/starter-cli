@@ -2,12 +2,12 @@
 
 # INSTALL
 ```bash
-npm install goze-cli -g
+npm install starter-cli -g
 ```
 
 # RUN
 ```bash
-goze
+starter
 ```
 
 # Generations
