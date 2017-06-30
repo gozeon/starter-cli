@@ -3,6 +3,7 @@
 process.env.NODE_PATH = __dirname + '/../node_modules/'
 
 const program = require('commander')
+const chalk = require('chalk')
 
 program
   .version(require('../package').version)
@@ -13,7 +14,7 @@ program
 program
   .command('add')
   .description('Add a new template')
-  .alias('a')
+  .alias(chalk.gray('a'))
   .action(() => {
     require('../command/add')()
   })
@@ -36,7 +37,7 @@ program
 
 program
   .command('delete')
-  .description(' :star2: Delete a template')
+  .description('😀 Delete a template')
   .alias('d')
   .action(() => {
     require('../command/delete')()
