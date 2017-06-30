@@ -14,7 +14,7 @@ program
 
 program
   .command('add')
-  .description(`${emoji.random()} Add a new template`)
+  .description(`${emoji.random().emoji} Add a new template`)
   .alias('a')
   .action(() => {
     require('../command/add')()
@@ -22,7 +22,7 @@ program
 
 program
   .command('list')
-  .description(`${emoji.random()} List all the templates`)
+  .description(`${emoji.random().emoji} List all the templates`)
   .alias('l')
   .action(() => {
     require('../command/list')()
@@ -30,7 +30,7 @@ program
 
 program
   .command('init')
-  .description(`${emoji.random()} Generate a new project`)
+  .description(`${emoji.random().emoji} Generate a new project`)
   .alias('i')
   .action(() => {
     require('../command/init')()
@@ -38,8 +38,8 @@ program
 
 program
   .command('delete')
-  .description(`${emoji.random()} Delete a template`)
-  .alias('i')
+  .description(`${emoji.random().emoji} Delete a template`)
+  .alias('d')
   .action(() => {
     require('../command/delete')()
   })
