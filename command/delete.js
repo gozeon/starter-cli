@@ -13,7 +13,7 @@ module.exports = () => {
     if (config.tpl[tplName]) {
       config.tpl[tplName] = undefined
     } else {
-      console.log(`${emoji.get(':exclamation:')} ${chalk.red('Template does not exist!')}`)
+      console.log(`${emoji.get(':warning:')}\r ${chalk.red('Template does not exist!')}`)
       process.exit()
     }
 
