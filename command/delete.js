@@ -5,6 +5,7 @@ const config = require('../templates')
 const chalk = require('chalk')
 const fs = require('fs')
 const emoji = require('node-emoji')
+const utils = require('../utils')
 
 module.exports = () => {
   co(function* () {
@@ -13,15 +14,15 @@ module.exports = () => {
     if (config.tpl[tplName]) {
       config.tpl[tplName] = undefined
     } else {
-      console.log(`${emoji.get(':warning:')}\r ${chalk.red('Template does not exist!')}`)
+      console.log(`${emoji.get(':warning:')} ${chalk.red('Template does not exist!')}`)
       process.exit()
     }
 
     fs.writeFile(__dirname + '/../templates.json', JSON.stringify(config), 'utf-8', (err) => {
       if (err) console.log(err)
-      console.log(`${emoji.get(':heavy_check_mark:')} ${chalk.green('\n √ Template deleted!')}`)
+      console.log(`${emoji.get(':sparkles:')} ${chalk.green('\n √ Template deleted!')}`)
       console.log(chalk.grey('The last template list is: \n'))
-      console.log(config)
+      utils.consoleTemplate();
       console.log('\n')
       process.exit()
     })

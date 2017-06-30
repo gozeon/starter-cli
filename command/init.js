@@ -29,7 +29,7 @@ module.exports = () => {
         console.log(error)
         process.exit()
       }
-      console.log(`${emoji.get(':heavy_check_mark:')} ${chalk.green('\n √ Generation completed!')}`)
+      console.log(`${emoji.get(':sparkles:')} ${chalk.green('\n √ Generation completed!')}`)
       console.log(`\n cd ${projectName} && npm install \n`)
       process.exit()
     })
