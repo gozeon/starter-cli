@@ -2,7 +2,7 @@
 const exec = require('child_process').exec
 const co = require('co')
 const prompt = require('co-prompt')
-const config = require('../templates')
+const templates = require('../templates')
 const chalk = require('chalk')
 const emoji = require('node-emoji')
 
@@ -13,12 +13,12 @@ module.exports = () => {
     let gitUrl
     let branch
 
-    if (!config.tpl[tplName]) {
+    if (!templates.tpl[tplName]) {
       console.log(`${emoji.get(':warning:')}' ${chalk.red('Template does not exit!')}`)
       process.exit()
     }
-    gitUrl = config.tpl[tplName].url
-    branch = config.tpl[tplName].branch
+    gitUrl = templates.tpl[tplName].url
+    branch = templates.tpl[tplName].branch
 
     let cmdStr = `git clone -b ${branch} ${gitUrl} ${projectName}`
 

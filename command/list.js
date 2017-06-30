@@ -1,8 +1,8 @@
 'use strict'
-const chalk = require('chalk')
+const templates = require('../templates')
 const utils = require('../utils')
 
 module.exports = () => {
-  utils.consoleTemplate();
+  utils.consoleTemplate(templates.tpl);
   process.exit()
 }
