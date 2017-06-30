@@ -1,7 +1,11 @@
 'use strict'
-const config = require('../templates')
+const templates = require('../templates')
+const chalk = require('chalk')
 
 module.exports = () => {
-  console.log(config.tpl)
+  templates.tpl;
+  Object.getOwnPropertyNames(templates.tpl).forEach((key, idx, array) => {
+    console.log(`${chalk.grey(index)}:  ${chalk.green(key)}`)
+  });
   process.exit()
 }
