@@ -5,7 +5,9 @@ const prompt = require('co-prompt')
 const templates = require('../templates')
 const chalk = require('chalk')
 const emoji = require('node-emoji')
-const utils = require('../utils');
+const utils = require('../utils')
+const fs = require('fs-extra')
+const path = require('path')
 
 module.exports = () => {
   co(function* () {
@@ -30,26 +32,33 @@ module.exports = () => {
         console.log(error)
         process.exit()
       }
-      // let initGitStr = `rm -rf ./${projectName}/.git/ && git init && git add . && git commit -m "chore(*): init project by goze-cli"`
-      // exec(initGitStr, (error, stdout, stderr) => {
-      //   if (error) {
-      //     console.log(error)
-      //     process.exit()
-      //   }
 
-      //   console.log(`${emoji.get(':sparkles:')}' ${chalk.green('√ Generation completed!')}`)
-      //   console.log(`\n cd ${projectName} && npm install \n`)
-      //   process.exit()
-      // })
       utils.gitInit(projectName, function (error) {
         if (error) {
           console.log(error)
           process.exit()
         }
-        
-        console.log(`${emoji.get(':sparkles:')}' ${chalk.green('√ Generation completed!')}`)
-        console.log(`\n cd ${projectName} && npm install \n`)
-        process.exit()
+        const projectPath = path.resolve(process.cwd(), `${projectName}/`);
+
+        fs.readJson(path.resolve(projectPath, 'package.json'))
+          .then(packageObj => {
+            fs.writeJson(path.resolve(projectPath, 'package.json'),
+              utils.rewritePkg(projectName, packageObj), err => {
+                if (err) {
+                  console.log(err)
+                  process.exit()
+                }
+
+                console.log(`${emoji.get(':sparkles:')}' ${chalk.green('√ Generation completed!')}`)
+                console.log(`\n cd ${projectName} && npm install \n`)
+                process.exit()
+              })
+
+          })
+          .catch(err => {
+            console.log(err)
+            process.exit()
+          })
       })
     })
   })
