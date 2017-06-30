@@ -29,9 +29,17 @@ module.exports = () => {
         console.log(error)
         process.exit()
       }
-      console.log(`${emoji.get(':sparkles:')}' ${chalk.green('√ Generation completed!')}`)
-      console.log(`\n cd ${projectName} && npm install \n`)
-      process.exit()
+
+      exec(`cd ${projectName} && rm -rf .git && git init`, (error, stdout, stderr) => {
+        if (error) {
+          console.log(error)
+          process.exit()
+        }
+
+        console.log(`${emoji.get(':sparkles:')}' ${chalk.green('√ Generation completed!')}`)
+        console.log(`\n cd ${projectName} && npm install \n`)
+        process.exit()
+      })
     })
   })
 }
