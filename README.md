@@ -1,8 +1,7 @@
 # Starter-Cli
 
-[![Version](https://img.shields.io/npm/v/starter-cli.svg)](https://www.npmjs.com/package/starter-cli)
-[![Downloads](https://img.shields.io/npm/dw/starter-cli.svg)](https://www.npmjs.com/package/starter-cli) 
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/Gozeon/starter-cli/blob/master/LICENSE)
+[![NPM](https://nodei.co/npm/starter-cli.png)](https://nodei.co/npm/starter-cli/)
+
 
 # INSTALL
 ```bash
@@ -44,3 +43,6 @@ starter
 - [acebookincubator/create-react-app](https://github.com/facebookincubator/create-react-app.git)
 - [react-community/create-react-native-app](https://github.com/react-community/create-react-native-app.git)
 - [supnate/rekit](https://github.com/supnate/rekit.git)
+
+# License
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/Gozeon/starter-cli/blob/master/LICENSE)
