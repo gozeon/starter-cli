@@ -1,6 +1,6 @@
 # CLI-TOOLS
 
-[![Version](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/starter-cli)
+[![Version](https://img.shields.io/npm/v/starter-cli.svg)](https://www.npmjs.com/package/starter-cli)
 
 # INSTALL
 ```bash
