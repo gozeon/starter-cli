@@ -2,6 +2,7 @@
 
 [![Version](https://img.shields.io/npm/v/starter-cli.svg)](https://www.npmjs.com/package/starter-cli)
 [![Downloads](https://img.shields.io/npm/dw/starter-cli.svg)](https://www.npmjs.com/package/starter-cli) 
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/Gozeon/starter-cli/blob/master/LICENSE)
 
 # INSTALL
 ```bash
