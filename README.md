@@ -1,8 +1,7 @@
 # Starter-Cli
 
 [![Version](https://img.shields.io/npm/v/starter-cli.svg)](https://www.npmjs.com/package/starter-cli)
-[![Downloads](https://img.shields.io/npm/dw/starter-cli.svg)](https://www.npmjs.com/package/starter-cli)
-[![Version](https://img.shields.io/node/v/gh-badges.svg)](https://nodejs.org/dist/latest-v6.x/SHASUMS256.txt)  
+[![Downloads](https://img.shields.io/npm/dw/starter-cli.svg)](https://www.npmjs.com/package/starter-cli) 
 
 # INSTALL
 ```bash
