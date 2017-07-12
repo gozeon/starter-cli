@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "starter": "./bin/goze.js",
+    "starter": "./bin/goze.js"
+  },
+  "scripts": {
     "publish-patch": "npm version patch; npm publish"
   },
   "repository": {
