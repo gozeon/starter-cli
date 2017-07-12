@@ -1,5 +1,6 @@
 const chalk = require('chalk')
 const exec = require('child_process').exec
+const notifier = require('node-notifier')
 
 module.exports = {
   consoleTemplate: function (obj) {
@@ -51,5 +52,11 @@ module.exports = {
       delete obj_.bugs
     }
     return obj_
+  },
+  showNotifier: function (title, message) {
+    notifier.notify({
+      title: title,
+      message: message
+    });
   }
 }
