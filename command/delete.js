@@ -14,13 +14,15 @@ module.exports = () => {
     if (templates.tpl[tplName]) {
       delete templates.tpl[tplName]
     } else {
-      console.log(`${emoji.get(':warning:')}' ${chalk.red('Template does not exist!')}`)
+      utils.showNotifier('Warning', `Template ${tplName} does not exist!`)
+      console.log(`${emoji.get(':warning:')}  ${chalk.red('Template does not exist!')}`)
       process.exit()
     }
 
     fs.writeFile(__dirname + '/../templates.json', JSON.stringify(templates), 'utf-8', (err) => {
       if (err) console.log(err)
-      console.log(`${emoji.get(':sparkles:')}' ${chalk.green('Template deleted!')}`)
+        utils.showNotifier('Success', `Template ${tplName} deleted!`)
+      console.log(`${emoji.get(':sparkles:')}  ${chalk.green('Template deleted!')}`)
       console.log(chalk.grey('The last template list is: \n'))
       utils.consoleTemplate(templates.tpl)
       console.log('\n')

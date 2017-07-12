@@ -17,7 +17,8 @@ module.exports = () => {
     let branch
 
     if (!templates.tpl[tplName]) {
-      console.log(`${emoji.get(':warning:')}' ${chalk.red('Template does not exit!')}`)
+      utils.showNotifier('Warning', `Template ${tplName} does not exist!`)
+      console.log(`${emoji.get(':warning:')}  ${chalk.red('Template does not exit!')}`)
       process.exit()
     }
     gitUrl = templates.tpl[tplName].url
@@ -49,7 +50,7 @@ module.exports = () => {
                   console.log(error)
                   process.exit()
                 }
-                
+                utils.showNotifier('Success', `√ Generation completed!`)
                 console.log(`${chalk.green('√ Generation completed!')}`)
                 console.log(`\n cd ${projectName} && npm install \n`)
                 process.exit()
