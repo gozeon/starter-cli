@@ -10,10 +10,14 @@ module.exports = {
     })
   },
   gitInit: function (projectName, callback) {
-    let initGitStr = `cd ${projectName}/ &&` +
-      ` rm -rf .git/ && ` +
-      `git init && git add . && ` +
-      `git commit -m "chore(*): init project by starter-cli" && cd ..`
+    let initGitStr = [
+      `cd ${projectName}/`,
+      "rm -rf .git/",
+      "git init",
+      "git add .",
+      `git commit -m "chore(*): init project by starter-cli"`,
+      "cd .."
+    ].join(" && ")
     exec(initGitStr, (error, stdout, stderr) => {
       if (error) {
         callback(error)
