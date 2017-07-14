@@ -8,6 +8,7 @@ const emoji = require('node-emoji')
 const utils = require('../utils')
 const fs = require('fs-extra')
 const path = require('path')
+const Ora = require('ora')
 
 module.exports = () => {
   co(function* () {
@@ -15,53 +16,58 @@ module.exports = () => {
     let projectName = yield prompt('Project name: ')
     let gitUrl
     let branch
+    const spinner = new Ora()
 
-    if (!templates.tpl[tplName]) {
-      utils.showNotifier('Warning', `Template ${tplName} does not exist!`)
-      console.log(`${emoji.get(':warning:')}  ${chalk.red('Template does not exit!')}`)
-      process.exit()
-    }
-    gitUrl = templates.tpl[tplName].url
-    branch = templates.tpl[tplName].branch
+    spinner.start(` start generating...`)
 
-    let cmdStr = `git clone -b ${branch} ${gitUrl} ${projectName}`
+    setTimeout(() => {
 
-    console.log(chalk.white('\n Start generating... \n'))
-
-    exec(cmdStr, (error, stdout, stderr) => {
-      if (error) {
-        console.log(error)
+      if (!templates.tpl[tplName]) {
+        utils.showNotifier('Warning', `Template ${tplName} does not exist!`)
+        spinner.warn( ` ${chalk.yellow(tplName)} does not exit!`)
         process.exit()
       }
+      gitUrl = templates.tpl[tplName].url
+      branch = templates.tpl[tplName].branch
 
-      const projectPath = path.resolve(process.cwd(), `${projectName}/`);
+      let cmdStr = `git clone -b ${branch} ${gitUrl} ${projectName}`
 
-      fs.readJson(path.resolve(projectPath, 'package.json'))
-        .then(packageObj => {
-          fs.writeJson(path.resolve(projectPath, 'package.json'),
-            utils.rewritePkg(projectName, packageObj), err => {
-              if (err) {
-                console.log(err)
-                process.exit()
-              }
+      exec(cmdStr, (error, stdout, stderr) => {
+        if (error) {
+          spinner.fail(error.message)
+          process.exit()
+        }
 
-              utils.gitInit(projectName, function (error) {
-                if (error) {
-                  console.log(error)
+        const projectPath = path.resolve(process.cwd(), `${projectName}/`);
+
+        fs.readJson(path.resolve(projectPath, 'package.json'))
+          .then(packageObj => {
+            fs.writeJson(path.resolve(projectPath, 'package.json'),
+              utils.rewritePkg(projectName, packageObj), err => {
+                if (err) {
+                  spinner.fail(error.message)
                   process.exit()
                 }
-                utils.showNotifier('Success', `√ Generation completed!`)
-                console.log(`${chalk.green('√ Generation completed!')}`)
-                console.log(`\n cd ${projectName} && npm install \n`)
-                process.exit()
-              })
-            })
 
-        })
-        .catch(err => {
-          console.log(err)
-          process.exit()
-        })
-    })
+                utils.gitInit(projectName, function (error) {
+                  if (error) {
+                    spinner.fail(error.message)
+                    process.exit()
+                  }
+                  utils.showNotifier('Success', `√ Generation completed!`)
+                  spinner.succeed(` ${chalk.green('Generation completed!')}`)
+                  console.log(chalk.grey(`\n cd ${projectName} && npm install \n`))
+                  process.exit()
+                })
+              })
+
+          })
+          .catch(err => {
+            console.log(err)
+            process.exit()
+          })
+      })
+
+    }, 2000)
   })
 }
