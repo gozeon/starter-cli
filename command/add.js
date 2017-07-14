@@ -5,8 +5,8 @@ const templates = require('../templates')
 const chalk = require('chalk')
 const fs = require('fs')
 const emoji = require('node-emoji')
-const utils = require('../utils');
-const Ora = require('ora');
+const utils = require('../utils')
+const Ora = require('ora')
 
 module.exports = () => {
   co(function* () {
@@ -19,25 +19,25 @@ module.exports = () => {
 
     setTimeout(() => {
 
-    if (!templates.tpl[tplName]) {
-      templates.tpl[tplName] = {}
-      templates.tpl[tplName]['url'] = gitUrl.replace(/[\u0000-\u0019]/g, '')
-      templates.tpl[tplName]['branch'] = branch
-    } else {
-      spinner.warn(` ${tplName} has already existed!`)
-      utils.showNotifier('Warning', `${tplName} has already existed!`)
-      process.exit()
-    }
+      if (!templates.tpl[tplName]) {
+        templates.tpl[tplName] = {}
+        templates.tpl[tplName]['url'] = gitUrl.replace(/[\u0000-\u0019]/g, '')
+        templates.tpl[tplName]['branch'] = branch
+      } else {
+        spinner.warn(` ${chalk.yellow(tplName)} has already existed!`)
+        utils.showNotifier('Warning', `${tplName} has already existed!`)
+        process.exit()
+      }
 
-    fs.writeFile(__dirname + '/../templates.json', JSON.stringify(templates), 'utf-8', (err) => {
-      if (err) console.log(err)
-      spinner.succeed(` New template ${tplName} is added!`)
-      utils.showNotifier('Success', `New template ${tplName} added!`)
-      console.log(chalk.grey('The latest template list is: \n'))
-      utils.consoleTemplate(templates.tpl)
-      console.log('\n')
-      process.exit()
-    })
+      fs.writeFile(__dirname + '/../templates.json', JSON.stringify(templates), 'utf-8', (err) => {
+        if (err) console.log(err)
+        spinner.succeed(` ${chalk.yellow(tplName)} is added!`)
+        utils.showNotifier('Success', `New template ${tplName} added!`)
+        console.log(chalk.grey('The latest template list is: \n'))
+        utils.consoleTemplate(templates.tpl)
+        console.log('\n')
+        process.exit()
+      })
     }, 1800)
   })
 }
