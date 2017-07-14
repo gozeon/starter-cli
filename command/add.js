@@ -13,7 +13,7 @@ module.exports = () => {
     let tplName = yield prompt('Template name: ')
     let gitUrl = yield prompt('Git https link: ')
     let branch = yield prompt('Branch: ')
-    const spinner = new Ora();
+    const spinner = new Ora()
 
     spinner.start(` template ${chalk.yellow(tplName)} is adding.`);
 
