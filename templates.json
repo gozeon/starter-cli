@@ -1,9 +1,5 @@
 {
   "tpl": {
-    "create-react-app-eslint": {
-      "url": "https://github.com/Gozeon/create-react-app-eslint.git",
-      "branch": "master"
-    },
     "create-react-app-redux": {
       "url": "https://github.com/notrab/create-react-app-redux.git",
       "branch": "master"

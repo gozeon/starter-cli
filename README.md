@@ -17,7 +17,6 @@ starter
 
 ## React
 
-- [Gozeon/create-react-app-eslint](https://github.com/Gozeon/create-react-app-eslint.git)
 - [notrab/create-react-app-redux](https://github.com/notrab/create-react-app-redux.git)
 - [kriasoft/react-starter-kit](https://github.com/kriasoft/react-starter-kit.git)
 - [davezuko/react-redux-starter-kit](https://github.com/davezuko/react-redux-starter-kit.git)
