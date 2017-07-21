@@ -1,7 +1,3 @@
-# Starter-Cli
-
-[![NPM](https://nodei.co/npm/starter-cli.png)](https://nodei.co/npm/starter-cli/)
-
 
 ```text
 
@@ -13,6 +9,10 @@ _\ \| |_| (_| || |   | |_|  __/| |  |_____|/ /___ | || |
                                                        
 
 ```
+
+# Starter-Cli
+
+[![NPM](https://nodei.co/npm/starter-cli.png)](https://nodei.co/npm/starter-cli/)
 
 # INSTALL
 ```bash
