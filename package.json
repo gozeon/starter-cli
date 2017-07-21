@@ -8,7 +8,8 @@
   },
   "scripts": {
     "publish-patch": "npm version patch; npm publish",
-    "publish-minor": "npm version minor; npm publish"
+    "publish-minor": "npm version minor; npm publish",
+    "changelog": "./node_modules/.bin/conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "repository": {
     "type": "git",
