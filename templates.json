@@ -35,6 +35,10 @@
     "angular2-react": {
       "url": "https://github.com/jesion/angular2-react.git",
       "branch": "master"
+    },
+    "go-starter-kit": {
+      "url": "https://github.com/olebedev/go-starter-kit.git",
+      "branch": "master"
     }
   }
 }

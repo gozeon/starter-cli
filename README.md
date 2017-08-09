@@ -41,6 +41,10 @@ starter
 
 - [mcnamee/react-native-starter-app](https://github.com/mcnamee/react-native-starter-app.git)
 
+## Go
+
+- [olebedev/go-starter-kit](https://github.com/olebedev/go-starter-kit.git)
+
 ## Others
 
 - [google/web-starter-kit](https://github.com/google/web-starter-kit.git)
