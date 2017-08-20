@@ -14,12 +14,12 @@ _\ \| |_| (_| || |   | |_|  __/| |  |_____|/ /___ | || |
 
 [![NPM](https://nodei.co/npm/starter-cli.png)](https://nodei.co/npm/starter-cli/)
 
-# INSTALL
+# Install
 ```bash
 npm install starter-cli -g
 ```
 
-# RUN
+# Run
 ```bash
 starter
 ```
