@@ -39,6 +39,10 @@
     "go-starter-kit": {
       "url": "https://github.com/olebedev/go-starter-kit.git",
       "branch": "master"
+    },
+    "ng2-admin": {
+      "url": "https://github.com/akveo/ng2-admin",
+      "branch": "master"
     }
   }
 }
