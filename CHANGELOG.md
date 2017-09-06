@@ -1,3 +1,33 @@
+<a name="1.10.2"></a>
+## [1.10.2](https://github.com/Gozeon/starter-cli/compare/v1.10.1...v1.10.2) (2017-09-06)
+
+
+
+<a name="1.10.1"></a>
+## [1.10.1](https://github.com/Gozeon/starter-cli/compare/v1.10.0...v1.10.1) (2017-09-06)
+
+
+### Features
+
+* ng2-admin ([f392a94](https://github.com/Gozeon/starter-cli/commit/f392a94))
+
+
+
+<a name="1.10.0"></a>
+# [1.10.0](https://github.com/Gozeon/starter-cli/compare/v1.9.5...v1.10.0) (2017-08-17)
+
+
+
+<a name="1.9.5"></a>
+## [1.9.5](https://github.com/Gozeon/starter-cli/compare/v1.9.4...v1.9.5) (2017-08-09)
+
+
+### Features
+
+* add go starter kit ([8764315](https://github.com/Gozeon/starter-cli/commit/8764315))
+
+
+
 <a name="1.9.4"></a>
 ## [1.9.4](https://github.com/Gozeon/starter-cli/compare/v1.9.3...v1.9.4) (2017-07-21)
 
