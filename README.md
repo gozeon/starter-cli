@@ -36,6 +36,7 @@ starter
 ## Angular
 
 - [AngularClass/angular-starter](https://github.com/AngularClass/angular-starter.git)
+- [akveo/ng2-admin](https://github.com/akveo/ng2-admin)
 
 ## React Native
 
