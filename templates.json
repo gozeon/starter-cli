@@ -43,6 +43,10 @@
     "ng2-admin": {
       "url": "https://github.com/akveo/ng2-admin",
       "branch": "master"
+    },
+    "common-cli": {
+      "url": "https://github.com/gozeon/common-cli",
+      "branch": "master"
     }
   }
 }
