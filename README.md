@@ -50,7 +50,8 @@ starter
 
 - [google/web-starter-kit](https://github.com/google/web-starter-kit.git)
 - [jesion/angular2-react](https://github.com/jesion/angular2-react.git)
-- [micooz/es6-webpack2-starter](https://github.com/micooz/es6-webpack2-starter.git)  
+- [micooz/es6-webpack2-starter](https://github.com/micooz/es6-webpack2-starter.git)
+- [typescript-library-starter](https://github.com/alexjoverm/typescript-library-starter)
 
 # Cli-Tools
 
